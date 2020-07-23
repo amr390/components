@@ -11,12 +11,9 @@
         border: 1px solid #ddd
         position: absolute
 .li
-    .start
-        left: 0px
-    .end
-        right: 0px
     position: relative
     transition: all 200ms ease-in
+    top: 10px
 
 .timestamp
     margin-bottom: 20px
@@ -35,15 +32,20 @@
     h4
         font-weight: 600
     &:before
-        content: ''
-        width: 25px
-        height: 25px
+        content: 'start'
         background-color: white
         border-radius: 25px
         border: 1px solid #ddd
         position: absolute
+        left: 0px
         top: -15px
-        left: 42%
+        transition: all 200ms ease-in 
+.end
+    display: flex
+    justify-content: end 
+    &:before
+        content: 'end'
+        top: 15px
         transition: all 200ms ease-in 
 .li.complete
   .status
@@ -79,20 +81,3 @@ html,body
     justify-content: center
     font-family: 'Titillium Web', sans serif
     color: #758D96
-
-button
-    position: absolute
-    width: 100px
-    min-width: 100px
-    padding: 20px
-    margin: 20px
-    font-family: 'Titillium Web', sans serif
-    border: none
-    color: white
-    font-size: 16px
-    text-align: center
-#toggleButton
-    position: absolute
-    left: 50px
-    top: 20px
-    background-color: #75C7F6
