@@ -5,7 +5,7 @@ import { TimelineComponent } from './timeline/timeline.component';
 
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+/*   {path: '', component: AppComponent, pathMatch: 'full'}, */
   {path: 'timeline', component: TimelineComponent}
 ];
 
