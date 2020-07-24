@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Shift, SHIFT_FIXTURES } from './model';
 
 @Component({
   selector: 'app-timeline',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimelineComponent implements OnInit {
 
+  shifts: Shift[];
+
   constructor() { }
 
   ngOnInit() {
+    this.shifts = SHIFT_FIXTURES;
   }
 
 }

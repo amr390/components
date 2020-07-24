@@ -1,10 +1,15 @@
 <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="timeline-wrapper">
+<span class="start-daytime">0</span>
 <ul class="timeline" id="timeline">
+    <li *ngFor="let shift of shifts" class="li complete">
+            <span class="author">{{shift.getStartTime()}}</span>
+            <span class="date">{{shift.getEndTime()}}</span>
+    </li>
+<!--     
     <li class="li complete">
         <div class="timestamp">
-            <span class="author">Aaron Rodgers</span>
-            <span class="date">11/15/2014</span>
         </div>
         <div class="status">
             <h4> SIC Approval </h4>
@@ -21,4 +26,7 @@
         </div>
         <div class="end"></div>
     </li>
+ -->
 </ul>
+<span class="end-daytime">24</span>
+</div>
