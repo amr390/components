@@ -14,6 +14,7 @@ export class TimelineComponent implements OnInit {
 
   ngOnInit() {
     this.shifts = SHIFT_FIXTURES;
+    this.shifts.forEach( shift => console.log(shift.getStartOffset()));
   }
 
 }

@@ -16,12 +16,27 @@ export class Shift {
     }
 
     public getStartTime() {
-        return moment(this.start).format('hh:mm');
+        return moment(this.start).format('HH:mm');
     }
 
     public getEndTime() {
-        return moment(this.end).format('hh:mm');
+        return moment(this.end).format('HH:mm');
     }
+
+    public getStartOffset() {
+        const dayMins = 24 * 60; // 1440 Min.
+        const mins = (moment(this.start).hours() * 60) + (moment(this.start).minutes());
+
+        return mins * 100 / dayMins; // %offset
+    }
+
+    public getEndOffset() {
+        const dayMins = 24 * 60; // 1440 Min.
+        const mins = (moment(this.end).hours() * 60) + (moment(this.end).minutes());
+
+        return mins * 100 / dayMins; // %offset
+    }
+
 
 }
 
