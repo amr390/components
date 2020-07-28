@@ -3,36 +3,17 @@
 <div class="timeline-wrapper">
 <span class="start-daytime">0</span>
 <ul class="timeline" id="timeline">
-    <li *ngFor="let shift of shifts" class="li complete" [ngStyle]="{'left.%': shift.getStartOffset()}">
-        <div class="timestamp">
+    <li *ngFor="let shift of shifts; index as idx" class="li complete" [ngStyle]="{'left.%': calculateOffset(shift, idx), 'width.%': shift.getEndOffset() - shift.getStartOffset()}">
+        <div class="shift-start"></div>
+        <div class="shift-timestamp">
             <span class="author">{{shift.getStartTime()}}</span>
             <span class="date">{{shift.getEndTime()}}</span>
         </div>
-        <div class="status">
-            <h4> SIC Approval </h4>
+        <div class="shift-description">
+            <h4> SIC </h4>
         </div>
-        <div class="end"></div>
+        <div class="shift-end"></div>
     </li>
-<!--     
-    <li class="li complete">
-        <div class="timestamp">
-        </div>
-        <div class="status">
-            <h4> SIC Approval </h4>
-        </div>
-        <div class="end"></div>
-    </li>
-    <li class="li">
-        <div class="timestamp">
-            <span class="author">PAM Admin</span>
-            <span class="date">TBD</span>
-        </div>
-        <div class="status">
-            <h4> Shift Completed </h4>
-        </div>
-        <div class="end"></div>
-    </li>
- -->
 </ul>
 <span class="end-daytime">24</span>
 </div>

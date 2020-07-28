@@ -5,14 +5,14 @@
         position: relative
         top: 25px
 .timeline
-    width: 80%
+    width: 98%
     list-style-type: none
     display: flex
     align-items: center
     padding-inline-start: 0px
     &:before
         content: ''
-        width: 80%
+        width: 97%
         background-color: white
         margin-top: 10px
         border: 1px solid #ddd
@@ -22,14 +22,14 @@
     transition: all 200ms ease-in
     top: 10px
 
-.timestamp
+.shift-timestamp
     margin-bottom: 20px
     padding: 0px 40px
     display: flex
     flex-direction: column
     align-items: center
     font-weight: 100
-.status
+.shift-description
     padding: 0px 40px
     display: flex
     justify-content: center
@@ -50,7 +50,7 @@
         left: 0px
         top: -10px
         transition: all 200ms ease-in 
-.end
+.shift-end
     display: flex
     position: relative
     top: -63px
@@ -64,7 +64,7 @@
         top: 5px
         transition: all 200ms ease-in 
 .li.complete
-  .status
+  .shift-description
     border-top: 2px solid #66DC71
     &:before
         background-color: #66DC71
